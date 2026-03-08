@@ -1,5 +1,4 @@
 /* Melhorias Visuais (UI) Materno-Infantis com a Nova Identidade */
-/* Safe Area para Dynamic Island (iPhones com notch/ilha dinâmica) */
 body {
     background-color: #FAFAFA;
     padding-left: max(12px, env(safe-area-inset-left));
