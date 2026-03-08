@@ -517,39 +517,6 @@ Gestante em trabalho de parto não quer ler. Quer:
 
 ---
 
-## 🚀 Próximos Passos Para Maximizar Conversão
-
-### Curto Prazo (1-2 semanas)
-1. ✅ Hospedar no domínio gabrielaalmeidaenf.com.br
-2. ✅ Submeter sitemap no Google Search Console
-3. ⬜ Adicionar horários de atendimento (seg-sex 08h-18h)
-4. ⬜ Integrar Google Analytics para tracking
-
-### Médio Prazo (1-2 meses)
-1. ⬜ Postar fotos/vídeos do curso em Instagram
-2. ⬜ Link cruzado website ↔ Instagram
-3. ⬜ Coletar 5-10 depoimentos adicionais
-4. ⬜ Criar FAQ adicional baseado em perguntas WhatsApp
-
-### Longo Prazo (3+ meses)
-1. ⬜ Blog com artigos: "Como preparar-se para amamentação"
-2. ⬜ Sistema de agendamento online (Calendly)
-3. ⬜ Integração com Pipedrive CRM
-4. ⬜ Estratégia de email nurturing
-
----
-
-- [ ] Integração com sistema de agendamento online
-- [ ] Blog com artigos sobre maternidade
-- [ ] Integração CRM (Pipedrive/HubSpot)
-- [ ] Dark mode toggle
-- [ ] Multi-idioma (EN, ES)
-- [ ] Chat em tempo real
-- [ ] Sistema de avaliações automático
-- [ ] Vídeos de testimoniais
-
----
-
 ### v1.0 - 08/03/2026 ✨
 - ✅ Landing page completa
 - ✅ Otimizado para nicho (Gestantes + Pós-parto)
