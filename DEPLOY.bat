@@ -1,67 +1,45 @@
 @echo off
 chcp 65001 >nul
-REM -*- coding: utf-8 -*-
-REM Script para fazer deploy da página Gabriela Almeida para GitHub
+REM Deploy interativo Gabriela Almeida - Edita commit!
 
 echo.
 echo ========================================
-echo 🚀 DEPLOY GABRIELA ALMEIDA PARA GITHUB
+echo 🚀 DEPLOY INTERATIVO - GABRIELA ALMEIDA
 echo ========================================
 echo.
 
-REM Configurar Git com nome do autor
-git config --global user.name "Murilo Tavares"
-git config --global user.email "murilo@example.com"
+REM Pull safe primeiro
+git pull origin main --rebase || echo "Pull concluído"
 
-echo ✅ Git configurado
+REM Config Git
+git config user.name "Murilo de Almeida Tavares"
+git config user.email "murilodealmeidatavares@gmail.com"
+
+echo ✅ Git sincronizado
 echo.
 
-REM Inicializar repositório
-git init
-echo ✅ Repositório Git inicializado
-
-echo.
-echo 📦 Adicionando arquivos...
+REM Add tudo
 git add .
-echo ✅ Arquivos adicionados
+echo ✅ Arquivos staged
 
+REM EDITAR MENSAGEM INTERATIVA
 echo.
-echo 💾 Fazendo commit...
-git commit -m "🚀 Update: Otimização SEO, README nicho, desenvolvedor credits
+echo 📝 DIGITE A MENSAGEM DO COMMIT:
+echo Ex: "Update hero + WhatsApp CTA" ou "Fix mobile + SEO"
+set /p COMMIT_MSG="Mensagem: "
 
-- Otimização SEO completa (meta tags, schema.org, sitemap)
-- README customizado para nicho (gestantes + pós-parto)  
-- Barra de progresso animada com gradiente marca
-- Parallax otimizado com GPU acceleration
-- Crédito ao desenvolvedor Murilo Tavares
-- Domínio atualizado: gabrielaalmeidaenf.com.br
-- .gitignore e deploy script adicionados
+REM Commit com sua mensagem
+git commit -m "%COMMIT_MSG%"
 
-Pronto para deploy em produção!"
-
-echo ✅ Commit realizado
-
+echo ✅ Commit "%COMMIT_MSG%" criado
 echo.
-echo 🔗 Adicionando repositório remoto GitHub...
-git remote add origin https://github.com/muriloatavares/gabriela-almeida.git
-echo ✅ Remote origin configurado
 
-echo.
-echo 🎯 Renomeando branch para 'main'...
-git branch -M main
-echo ✅ Branch renomeado para 'main'
-
-echo.
-echo 🚀 Fazendo push para GitHub...
-echo ⚠️  ATENÇÃO: Você pode ser solicitado a fazer login no GitHub!
-echo.
-git push -u origin main
+REM Push
+git push origin main
 
 echo.
 echo ========================================
-echo ✅ DEPLOY CONCLUÍDO COM SUCESSO!
+echo ✅ DEPLOY ENVIADO! Build em ~5 min
+echo 📍 https://muriloatavares.github.io/gabriela-almeida/
 echo ========================================
-echo.
-echo 📍 Repositório: https://github.com/muriloatavares/gabriela-almeida
-echo.
 pause
