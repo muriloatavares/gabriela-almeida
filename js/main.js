@@ -1,3 +1,15 @@
+// Efeito Parallax nos elementos com classe parallax
+const parallaxElements = document.querySelectorAll('.parallax');
+
+window.addEventListener('scroll', () => {
+    parallaxElements.forEach(element => {
+        const scrollPosition = window.scrollY;
+        const speed = element.dataset.speed || 0.5;
+        const yPos = scrollPosition * speed;
+        element.style.transform = `translateY(${yPos}px)`;
+    });
+});
+
 // Menu Mobile
 const btn = document.getElementById('mobile-menu-btn');
 const menu = document.getElementById('mobile-menu');

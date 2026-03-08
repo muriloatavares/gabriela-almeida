@@ -6,6 +6,33 @@ body {
     padding-bottom: max(12px, env(safe-area-inset-bottom));
 }
 
+/* Scrollbar Personalizado */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAFAFA;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #B8AFC4 0%, #2E2433 100%);
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #C3CEC3 0%, #2E2433 100%);
+    box-shadow: 0 0 6px rgba(184, 175, 196, 0.4);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #B8AFC4 #FAFAFA;
+}
+
 .glass-nav {
     background: rgba(250, 250, 250, 0.90);
     backdrop-filter: blur(12px);
@@ -99,11 +126,10 @@ body {
     fill: #FAFAFA;
 }
 
-/* Acordeão FAQ */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+/* Parallax Effect */
+.parallax {
+    position: absolute;
+    will-change: transform;
 }
 .faq-item.active .faq-answer {
     max-height: 500px;
