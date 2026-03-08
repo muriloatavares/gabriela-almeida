@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://gabrielaalmeidaenf.com.br/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

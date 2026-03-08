@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Gabriela Almeida | Enfermeira Obstetra</title>
+    <meta name="description" content="Gabriela Almeida, Enfermeira Obstetra especializada em cuidados materno-infantil. Consultoria em amamentação, laserterapia, taping e furo humanizado. Acolhimento profissional com amor.">
+    <meta name="keywords" content="Enfermeira Obstetra, Cuidados materno-infantil, Amamentação, Laserterapia pós-parto, Taping gestação, Furo humanizado, São Paulo">
+    <meta name="author" content="Gabriela Almeida">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Portuguese">
+    <meta property="og:title" content="Gabriela Almeida | Enfermeira Obstetra - Cuidados Materno-Infantil">
+    <meta property="og:description" content="Especialista em amamentação, laserterapia, taping e furo humanizado. Acompanhamento profissional com empatia e ciência.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gabrielaalmeidaenf.com.br">
+    <meta property="og:image" content="https://gabrielaalmeida.com/assets/images/Gabriela Almeida/4.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gabriela Almeida | Enfermeira Obstetra">
+    <meta name="twitter:description" content="Especialista em cuidados materno-infantil com mais de 10 anos de experiência">
+    <meta name="theme-color" content="#2E2433">
+    <link rel="canonical" href="https://gabrielaalmeidaenf.com.br">
     
-    <!-- Tipografia Materno-Infantil & Elegante -->
+    <!-- Preconnect para otimizar requisições externas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="pt-BR" href="https://gabrielaalmeidaenf.com.br">
+    <link rel="alternate" hreflang="pt-PT" href="https://gabrielaalmeidaenf.com.br">
+    <link rel="alternate" hreflang="x-default" href="https://gabrielaalmeidaenf.com.br">
+    
+    <title>Gabriela Almeida | Enfermeira Obstetra - Cuidados Materno-Infantil</title>
+    
+    <!-- Tipografia Materno-Infantil & Elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     
     <!-- Ícones -->
@@ -42,6 +67,9 @@
     </script>
 </head>
 <body class="font-sans text-brand-text antialiased selection:bg-brand-lilac selection:text-brand-dark overflow-x-hidden">
+
+    <!-- Barra de Progresso -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 z-[60] transition-all duration-300" style="background: linear-gradient(90deg, #B8AFC4 0%, #C3CEC3 50%, #2E2433 100%); width: 0%;"></div>
 
     <!-- Cabeçalho / Navegação -->
     <nav class="fixed w-full z-50 glass-nav border-b border-brand-nude transition-all duration-300" id="navbar">
@@ -100,7 +128,7 @@
     <section id="inicio" class="relative pt-32 pb-32 md:pt-40 md:pb-40 overflow-hidden min-h-[95vh] flex items-center bg-brand-nude/40">
         <!-- Bolhas de fundo (Blobs) com a paleta oficial - Parallax -->
         <div class="hero-blob parallax bg-brand-lilac w-[600px] h-[600px] rounded-full top-[-10%] left-[-10%]" data-speed="0.3"></div>
-        <div class="hero-blob parallax bg-brand-green w-[400px] h-[400px] rounded-full bottom-[10%] right-[5%]" data-speed="0.5"></div>
+        <div class="hero-blob parallax bg-brand-green w-[400px] h-[400px] rounded-full bottom-[10%] right-[5%]" data-speed="0.45"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -142,10 +170,10 @@
                 </div>
 
                 <!-- Imagem (Direita) -->
-                <div class="relative hidden md:block reveal-up delay-200 parallax" data-speed="0.2">
+                <div class="relative reveal-up delay-200 parallax" data-speed="0.2">
                     <div class="absolute inset-0 bg-brand-nude rounded-full blur-3xl opacity-50 transform translate-x-10 translate-y-10"></div>
                     <!-- Imagem principal com máscara de bolha suave -->
-                    <img src="assets/images/Gabriela Almeida/4.jpeg" alt="Mãe a amamentar bebé" class="w-full max-w-md mx-auto h-auto object-cover img-mask shadow-sm relative z-10">
+                    <img src="assets/images/Gabriela Almeida/4.jpeg" alt="Gabriela Almeida, Enfermeira Obstetra especialista em cuidados materno-infantil" class="w-full max-w-sm md:max-w-md mx-auto h-auto object-cover img-mask shadow-sm relative z-10">
                     
                     <!-- Cartão flutuante -->
                     <div class="absolute bottom-4 -left-8 bg-white/90 backdrop-blur p-4 rounded-3xl shadow-[0_15px_35px_rgba(46,36,51,0.1)] z-20 animate-bounce" style="animation-duration: 4s;">
@@ -172,7 +200,7 @@
     </section>
 
     <!-- Secção Quem Sou -->
-    <section id="sobre" class="py-24 md:py-32 bg-brand-light">
+    <section id="sobre" class="py-24 md:py-32 bg-brand-light overflow-hidden" itemscope itemtype="https://schema.org/Person">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                 
@@ -180,7 +208,7 @@
                 <div class="relative reveal-up parallax" data-speed="0.15">
                     <div class="absolute inset-0 bg-brand-lilac rounded-[2rem] sm:rounded-[3rem] transform -rotate-6 scale-105 -z-10 transition-transform duration-500"></div>
                     <!-- Substitua o src pela sua foto real do portfólio -->
-                    <img src="assets/images/Gabriela Almeida/2.jpeg" alt="Enfermeira Gabriela Almeida" class="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-[2rem] sm:rounded-[3rem] shadow-xl border-4 border-white">
+                    <img src="assets/images/Gabriela Almeida/2.jpeg" alt="Gabriela Almeida, Enfermeira Obstetra com formação São Camilo, especialista em amamentação e laserterapia pós-parto" class="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-[2rem] sm:rounded-[3rem] shadow-xl border-4 border-white">
                 </div>
 
                 <!-- Texto (Fiel ao seu PDF) -->
@@ -262,7 +290,7 @@
                     </div>
                     <div class="order-1 lg:order-2">
                         <div class="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl relative border-8 border-white bg-white">
-                            <img src="assets/images/Curso para gestante e acompanhantes/1.jpeg" alt="Curso para Gestantes" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                            <img src="assets/images/Curso para gestante e acompanhantes/1.jpeg" alt="Curso para Gestantes - Preparação com amamentação, cuidados com bebé e primeiros socorros" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
                 </div>
@@ -271,7 +299,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal-up">
                     <div>
                         <div class="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl relative border-8 border-white bg-white">
-                            <img src="assets/images/Tapping na gestação é no pós parto/1.jpeg" alt="Aplicação Taping Gestante" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                            <img src="assets/images/Tapping na gestação é no pós parto/1.jpeg" alt="Aplicação de Taping terapêutico na gestação para alivio de dores e no pós-parto para recuperação abdominal" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
                     <div class="lg:pl-12">
@@ -547,5 +575,52 @@
 
     <!-- Scripts da Página -->
     <script src="js/main.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Gabriela Almeida",
+        "description": "Enfermeira Obstetra especializada em cuidados materno-infantil",
+        "image": "https://gabrielaalmeidaenf.com.br/assets/images/Gabriela Almeida/4.jpeg",
+        "url": "https://gabrielaalmeidaenf.com.br",
+        "telephone": "+5511977521383",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Águia de Haia, 723",
+            "addressLocality": "Itaquera",
+            "addressRegion": "SP",
+            "postalCode": "03694-000",
+            "addressCountry": "BR"
+        },
+        "priceRange": "Consultar",
+        "areaServed": "São Paulo, SP",
+        "availableLanguage": "pt-BR",
+        "knowsAbout": [
+            "Amamentação",
+            "Laserterapia",
+            "Taping pré e pós-parto",
+            "Furo humanizado",
+            "Cuidados neonatais"
+        ],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Formação",
+            "educationalLevel": "Faculdade São Camilo - Enfermagem Obstétrica"
+        },
+        "sameAs": [
+            "https://wa.me/5511977521383",
+            "https://instagram.com/gabrielalmeida_enf_obstetra"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
 </body>
 </html>

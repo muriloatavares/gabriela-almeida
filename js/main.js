@@ -1,13 +1,31 @@
+// Progress Bar - Barra de Progresso no Topo
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+});
+
 // Efeito Parallax nos elementos com classe parallax
 const parallaxElements = document.querySelectorAll('.parallax');
+let scrollPosition = 0;
+let ticking = false;
+
+function updateParallax() {
+    parallaxElements.forEach(element => {
+        const speed = parseFloat(element.dataset.speed) || 0.5;
+        const yPos = scrollPosition * speed;
+        element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    });
+    ticking = false;
+}
 
 window.addEventListener('scroll', () => {
-    parallaxElements.forEach(element => {
-        const scrollPosition = window.scrollY;
-        const speed = element.dataset.speed || 0.5;
-        const yPos = scrollPosition * speed;
-        element.style.transform = `translateY(${yPos}px)`;
-    });
+    scrollPosition = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
 });
 
 // Menu Mobile
