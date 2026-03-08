@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Gabriela Almeida | Enfermeira Obstetra</title>
+    
+    <!-- Tipografia Materno-Infantil & Elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Link CSS Customizado -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tailwind CSS com a Paleta de Cores Oficial -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#2E2433',    // Roxo escuro (ícone e texto)
+                            text: '#1E1A1D',    // Preto suave (texto secundário)
+                            nude: '#EBD8D0',    // Rosa claro nude
+                            lilac: '#B8AFC4',   // Lilás acinzentado
+                            green: '#C3CEC3',   // Verde suave acinzentado
+                            light: '#FAFAFA'    // Fundo limpo para contraste
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-brand-text antialiased selection:bg-brand-lilac selection:text-brand-dark overflow-x-hidden">
+
+    <!-- Cabeçalho / Navegação -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-brand-nude transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logótipo (Inspirado na sua imagem) -->
+                <a href="#inicio" class="flex items-center gap-2 sm:gap-4 group">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-brand-dark group-hover:text-brand-lilac transition-colors">
+                        <i class="fa-solid fa-person-breastfeeding text-3xl sm:text-4xl"></i>
+                    </div>
+                    <div class="flex flex-col items-center border-l border-brand-dark/20 pl-2 sm:pl-4">
+                        <span class="font-serif font-bold text-[1.1rem] sm:text-[1.4rem] leading-none text-brand-dark tracking-[0.05em] uppercase">Gabriela</span>
+                        <span class="font-serif font-bold text-[1.1rem] sm:text-[1.4rem] leading-none text-brand-dark tracking-[0.05em] uppercase mb-1">Almeida</span>
+                        <div class="w-full h-[1px] bg-brand-dark/30 mb-1"></div>
+                        <span class="text-[0.55rem] sm:text-[0.60rem] tracking-[0.2em] uppercase text-brand-text font-bold text-center">Enfermeira Obstetra</span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#sobre" class="text-sm font-bold text-brand-text hover:text-brand-lilac transition-colors">Quem Sou</a>
+                    <a href="#servicos" class="text-sm font-bold text-brand-text hover:text-brand-lilac transition-colors">Procedimentos</a>
+                    <a href="#planos" class="text-sm font-bold text-brand-text hover:text-brand-lilac transition-colors">Valores e Planos</a>
+                    <a href="#faq" class="text-sm font-bold text-brand-text hover:text-brand-lilac transition-colors">Dúvidas</a>
+                    <a href="https://wa.me/5511977521383" target="_blank" class="bg-brand-dark text-brand-nude px-8 py-3 rounded-full text-sm font-bold hover:bg-brand-lilac hover:text-brand-dark transition-all hover:shadow-lg hover:-translate-y-1">Marcar Consulta</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark focus:outline-none text-2xl p-2 bg-brand-nude/50 rounded-full">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-light border-t border-brand-nude absolute w-full">
+            <div class="px-4 pt-2 pb-8 space-y-2 shadow-xl">
+                <a href="#sobre" class="block px-4 py-4 text-base font-bold text-brand-text hover:bg-brand-nude/50 rounded-2xl">Quem Sou</a>
+                <a href="#servicos" class="block px-4 py-4 text-base font-bold text-brand-text hover:bg-brand-nude/50 rounded-2xl">Procedimentos</a>
+                <a href="#planos" class="block px-4 py-4 text-base font-bold text-brand-text hover:bg-brand-nude/50 rounded-2xl">Valores e Planos</a>
+                <a href="#faq" class="block px-4 py-4 text-base font-bold text-brand-text hover:bg-brand-nude/50 rounded-2xl">Dúvidas Frequentes</a>
+                <a href="https://wa.me/5511977521383" target="_blank" class="block mt-6 text-center bg-brand-dark text-brand-nude px-6 py-4 rounded-full text-base font-bold shadow-sm">Marcar Consulta <i class="fa-brands fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511977521383" class="float-wa" target="_blank" aria-label="Fale comigo no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Secção Inicial (Hero - Foco no Acolhimento) -->
+    <section id="inicio" class="relative pt-32 pb-32 md:pt-40 md:pb-40 overflow-hidden min-h-[95vh] flex items-center bg-brand-nude/40">
+        <!-- Bolhas de fundo (Blobs) com a paleta oficial -->
+        <div class="hero-blob bg-brand-lilac w-[600px] h-[600px] rounded-full top-[-10%] left-[-10%]"></div>
+        <div class="hero-blob bg-brand-green w-[400px] h-[400px] rounded-full bottom-[10%] right-[5%]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Texto (Esquerda) -->
+                <div class="text-center lg:text-left reveal-up">
+                    <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-brand-light text-brand-dark text-xs font-bold tracking-widest uppercase mb-6 sm:mb-8 shadow-sm">
+                        <i class="fa-solid fa-hand-holding-heart text-brand-lilac"></i>
+                        Cuidado & Profissionalismo
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-dark mb-4 sm:mb-6 leading-[1.15] sm:leading-[1.1]">
+                        Um colo seguro para a sua <span class="italic text-brand-dark relative inline-block">
+                            jornada materna.
+                            <svg class="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-brand-lilac" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,10 Q50,20 100,10" stroke="currentColor" stroke-width="8" fill="transparent" stroke-linecap="round"/></svg>
+                        </span>
+                    </h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-brand-text mb-8 sm:mb-10 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Apoio especializado, informação baseada em evidências e muito carinho para que viva a maternidade com amor, segurança e confiança.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5511977521383" target="_blank" class="bg-brand-dark text-brand-nude px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-brand-lilac hover:text-brand-dark transition-all shadow-lg hover:shadow-[0_15px_30px_rgba(184,175,196,0.6)] hover:-translate-y-1 flex items-center justify-center gap-3">
+                            Falar com a Gabriela <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Prova Social Pequena -->
+                    <div class="mt-12 pt-8 flex flex-wrap justify-center lg:justify-start gap-8">
+                        <div class="flex items-center gap-4">
+                            <div class="flex -space-x-3">
+                                <div class="w-10 h-10 rounded-full border-2 border-brand-nude bg-brand-lilac flex items-center justify-center text-xs font-bold text-brand-dark">M</div>
+                                <div class="w-10 h-10 rounded-full border-2 border-brand-nude bg-brand-green flex items-center justify-center text-xs font-bold text-brand-dark">C</div>
+                                <div class="w-10 h-10 rounded-full border-2 border-brand-nude bg-white flex items-center justify-center text-xs font-bold text-brand-dark">J</div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-brand-dark leading-none">+500 famílias</p>
+                                <p class="text-xs text-brand-text mt-1">acolhidas com amor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem (Direita) -->
+                <div class="relative hidden md:block reveal-up delay-200">
+                    <div class="absolute inset-0 bg-brand-nude rounded-full blur-3xl opacity-50 transform translate-x-10 translate-y-10"></div>
+                    <!-- Imagem principal com máscara de bolha suave -->
+                    <img src="assets/images/Gabriela Almeida/4.jpeg" alt="Mãe a amamentar bebé" class="w-full max-w-md mx-auto h-auto object-cover img-mask shadow-sm relative z-10">
+                    
+                    <!-- Cartão flutuante -->
+                    <div class="absolute bottom-4 -left-8 bg-white/90 backdrop-blur p-4 rounded-3xl shadow-[0_15px_35px_rgba(46,36,51,0.1)] z-20 animate-bounce" style="animation-duration: 4s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-brand-dark">
+                                <i class="fa-solid fa-baby-carriage text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-brand-dark text-sm">Especialista</p>
+                                <p class="text-xs text-brand-text">Mãe e Bebé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divisor em Onda Inferior -->
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Secção Quem Sou -->
+    <section id="sobre" class="py-24 md:py-32 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                
+                <!-- Imagem -->
+                <div class="relative reveal-up">
+                    <div class="absolute inset-0 bg-brand-lilac rounded-[2rem] sm:rounded-[3rem] transform -rotate-6 scale-105 -z-10 transition-transform duration-500"></div>
+                    <!-- Substitua o src pela sua foto real do portfólio -->
+                    <img src="assets/images/Gabriela Almeida/2.jpeg" alt="Enfermeira Gabriela Almeida" class="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover rounded-[2rem] sm:rounded-[3rem] shadow-xl border-4 border-white">
+                </div>
+
+                <!-- Texto (Fiel ao seu PDF) -->
+                <div class="reveal-up delay-200">
+                    <span class="inline-flex items-center gap-2 bg-brand-nude text-brand-dark px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+                        <i class="fa-solid fa-leaf text-brand-green"></i> Quem Sou
+                    </span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-6">Prazer, sou a Gabriela Almeida</h2>
+                    
+                    <!-- Badges de Experiência e Formação -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-brand-green/20 px-4 py-3 rounded-2xl border border-brand-green/30 text-center">
+                            <p class="font-bold text-brand-dark text-lg">Desde 2013</p>
+                            <p class="text-xs text-brand-text font-medium">Na Enfermagem</p>
+                        </div>
+                        <div class="bg-brand-lilac/20 px-4 py-3 rounded-2xl border border-brand-lilac/30 text-center">
+                            <p class="font-bold text-brand-dark text-lg">São Camilo</p>
+                            <p class="text-xs text-brand-text font-medium">Formação</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-5 text-lg text-brand-text font-medium leading-relaxed">
+                        <p>Sou enfermeira obstetra formada pela Faculdade São Camilo, apaixonada por acolher mulheres e tornar a maternidade uma experiência mais leve, segura e cheia de amor.</p>
+                        
+                        <p>Atuo como laserterapeuta, consultora em amamentação, doula e especialista em cuidados com o bebé. Realizo o furo humanizado e a aplicação de taping no pré e no pós-parto, sempre com um olhar individualizado e baseado em evidências.</p>
+                        
+                        <p>Sou casada, madrasta do Gustavo e mãe da Ísis, a minha maior inspiração e a razão de eu compreender na prática a intensidade da maternidade. Sagitariana, amo o que faço e coloco propósito, técnica e muito carinho em cada atendimento.</p>
+                        
+                        <p>Nos momentos livres, valorizo estar com a minha família e amigos, vivendo a vida com alegria, fé e gratidão.</p>
+                        
+                        <!-- Caixas de Valores -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-brand-nude">
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border border-brand-green/20">
+                                <i class="fa-solid fa-book-medical text-2xl text-brand-green mb-2"></i>
+                                <h4 class="font-bold text-brand-dark mb-1">Ciência e Estudo</h4>
+                                <p class="text-sm">Protocolos atualizados para a sua segurança.</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border border-brand-lilac/20">
+                                <i class="fa-solid fa-hands-holding-child text-2xl text-brand-lilac mb-2"></i>
+                                <h4 class="font-bold text-brand-dark mb-1">Empatia Real</h4>
+                                <p class="text-sm">Escuta ativa e respeito pelas suas escolhas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Procedimentos (Serviços) -->
+    <section id="servicos" class="py-24 md:py-32 bg-brand-nude/30 relative overflow-hidden rounded-[4rem] mx-2 md:mx-6 my-10">
+        <!-- Detalhes de Fundo -->
+        <i class="fa-solid fa-star absolute top-10 left-10 text-brand-lilac text-4xl opacity-40"></i>
+        <i class="fa-solid fa-star absolute bottom-20 right-10 text-brand-green text-3xl opacity-40"></i>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-brand-dark font-bold tracking-widest uppercase text-sm mb-2 block">Apoio em todas as fases</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-6">Os Meus Procedimentos</h2>
+                <div class="w-16 h-2 bg-brand-lilac mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-20">
+                
+                <!-- Cuidado 1: Curso para Gestante -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal-up">
+                    <div class="order-2 lg:order-1 lg:pr-12">
+                        <div class="inline-flex items-center gap-2 bg-brand-green/30 px-4 py-2 rounded-full mb-6 shadow-sm">
+                            <i class="fa-solid fa-users text-brand-dark"></i>
+                            <span class="font-bold text-sm text-brand-dark">Para a Família</span>
+                        </div>
+                        <h3 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mb-4">Curso para Gestantes</h3>
+                        <p class="text-lg text-brand-text mb-6 font-medium">Vai além de preparar apenas mãe e pai. É pensado para toda a família que fará parte da rede de apoio do bebé que está a chegar, trazendo mais segurança, confiança e tranquilidade.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-brand-text font-bold bg-white p-3 rounded-2xl shadow-sm"><i class="fa-solid fa-heart text-brand-lilac"></i> Amamentação e prevenção de gretas</li>
+                            <li class="flex items-center gap-3 text-brand-text font-bold bg-white p-3 rounded-2xl shadow-sm"><i class="fa-solid fa-heart text-brand-lilac"></i> Demonstrações: Banho de banheira e ofurô, fraldas, cordão</li>
+                            <li class="flex items-center gap-3 text-brand-text font-bold bg-white p-3 rounded-2xl shadow-sm"><i class="fa-solid fa-heart text-brand-lilac"></i> Primeiros socorros e técnicas de desengasgamento</li>
+                        </ul>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl relative border-8 border-white bg-white">
+                            <img src="assets/images/Curso para gestante e acompanhantes/1.jpeg" alt="Curso para Gestantes" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuidado 2: Taping -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal-up">
+                    <div>
+                        <div class="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl relative border-8 border-white bg-white">
+                            <img src="assets/images/Tapping na gestação é no pós parto/1.jpeg" alt="Aplicação Taping Gestante" class="w-full h-[300px] sm:h-[400px] lg:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                    <div class="lg:pl-12">
+                        <div class="inline-flex items-center gap-2 bg-brand-nude px-4 py-2 rounded-full mb-6 shadow-sm">
+                            <i class="fa-solid fa-person-pregnant text-brand-dark"></i>
+                            <span class="font-bold text-sm text-brand-dark">Para a Mãe</span>
+                        </div>
+                        <h3 class="font-serif text-3xl md:text-4xl font-bold text-brand-dark mb-4">Taping na Gestação e Pós-Parto</h3>
+                        <p class="text-lg text-brand-text mb-6 font-medium">Uma técnica terapêutica que abraça o seu corpo quando ele mais precisa de sustentação, aliviando o peso e facilitando a recuperação.</p>
+                        <div class="space-y-4">
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border border-brand-nude">
+                                <strong class="text-brand-dark block mb-1">Pré-Parto (Gestação)</strong>
+                                <span class="text-sm text-brand-text">Alivia dores e tensão lombar, melhora a postura e reduz o inchaço nas pernas.</span>
+                            </div>
+                            <div class="bg-white p-5 rounded-3xl shadow-sm border border-brand-nude">
+                                <strong class="text-brand-dark block mb-1">Puerpério (Pós-Parto)</strong>
+                                <span class="text-sm text-brand-text">Reduz significativamente o inchaço, previne seroma, auxilia na aproximação dos músculos (diástase) e dá conforto abdominal (reduz sensação de "vazio").</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outros Cuidados (Cartões Bebé) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12">
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude baby-card reveal-up delay-100 text-center">
+                        <div class="w-16 h-16 bg-brand-nude rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-person-breastfeeding text-2xl text-brand-dark"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-xl text-brand-dark mb-3">Consultoria Amamentação</h4>
+                        <p class="text-sm text-brand-text">Apoio prático para avaliação da pega, orientações de ordenha, prevenção de gretas e tratamento de ingurgitamento ou mastite inicial.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude baby-card reveal-up delay-200 text-center">
+                        <div class="w-16 h-16 bg-brand-lilac/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-brand-dark"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-xl text-brand-dark mb-3">Laserterapia Pós-Parto</h4>
+                        <p class="text-sm text-brand-text">Recurso seguro e indolor. Acelera a cicatrização (cesariana/períneo), trata gretas mamárias e até assaduras ou otites do bebé.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude baby-card reveal-up delay-300 text-center">
+                        <div class="w-16 h-16 bg-brand-green/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-ear-listen text-2xl text-brand-dark"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-xl text-brand-dark mb-3">Furo Humanizado</h4>
+                        <p class="text-sm text-brand-text">O primeiro brinco da sua bebé com respeito à anatomia. Utilizamos pontos de acupuntura, material 100% estéril, anestesia tópica e crioterapia.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos e Valores -->
+    <section id="planos" class="py-24 md:py-32 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <i class="fa-solid fa-gift text-3xl text-brand-lilac mb-4"></i>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-4">Valores e Planos</h2>
+                <p class="text-lg text-brand-text font-medium">Escolha o formato ideal para cuidar de si e do seu bebé.</p>
+            </div>
+
+            <!-- Pacotes de Taping -->
+            <h3 class="font-serif text-2xl font-bold text-brand-dark mb-8 text-center reveal-up">Planos de Taping (Pós-Parto)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                <!-- Bronze -->
+                <div class="bg-white rounded-[2.5rem] p-8 border border-brand-nude shadow-sm flex flex-col baby-card reveal-up delay-100">
+                    <p class="text-brand-dark font-bold uppercase tracking-widest text-xs mb-2 text-center">Plano</p>
+                    <h4 class="font-serif text-3xl font-bold text-brand-dark mb-2 text-center">Bronze</h4>
+                    <div class="text-3xl font-bold text-brand-lilac text-center mb-6">R$ 280<span class="text-sm text-brand-text/50 font-normal"> /domicílio</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow font-medium text-sm text-brand-text">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 1 Aplicação de Taping</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 1 Laserterapia (cesariana ou períneo)</li>
+                        <li class="flex items-center gap-3 text-brand-text/40"><i class="fa-solid fa-minus"></i> Sem retirada incluída</li>
+                    </ul>
+                    <a href="https://wa.me/5511977521383?text=Olá, quero saber mais sobre o Plano Bronze de Taping" target="_blank" class="w-full block text-center bg-brand-nude text-brand-dark py-4 rounded-full font-bold hover:bg-brand-lilac transition-colors">Escolher este</a>
+                </div>
+
+                <!-- Prata -->
+                <div class="bg-brand-dark rounded-[2.5rem] p-8 flex flex-col baby-card reveal-up delay-200 relative transform md:-translate-y-4 shadow-xl">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-green text-brand-dark text-xs font-bold uppercase tracking-widest py-2 px-6 rounded-full shadow-md">
+                        <i class="fa-solid fa-star mr-1"></i> Mais Escolhido
+                    </div>
+                    <p class="text-brand-lilac font-bold uppercase tracking-widest text-xs mb-2 text-center mt-4">Plano</p>
+                    <h4 class="font-serif text-3xl font-bold text-brand-light mb-2 text-center">Prata</h4>
+                    <div class="text-3xl font-bold text-brand-nude text-center mb-6">R$ 550<span class="text-sm text-brand-light/50 font-normal"> /domicílio</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow font-medium text-sm text-brand-light/90">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 2 Aplicações de Taping</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 1 Retirada Profissional</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 1 Laserterapia (cesariana ou períneo)</li>
+                    </ul>
+                    <a href="https://wa.me/5511977521383?text=Olá, quero saber mais sobre o Plano Prata de Taping" target="_blank" class="w-full block text-center bg-brand-lilac text-brand-dark py-4 rounded-full font-bold hover:bg-brand-light transition-colors shadow-md">Escolher este</a>
+                </div>
+
+                <!-- Ouro -->
+                <div class="bg-white rounded-[2.5rem] p-8 border border-brand-nude shadow-sm flex flex-col baby-card reveal-up delay-300">
+                    <p class="text-brand-dark font-bold uppercase tracking-widest text-xs mb-2 text-center">Plano</p>
+                    <h4 class="font-serif text-3xl font-bold text-brand-dark mb-2 text-center">Ouro</h4>
+                    <div class="text-3xl font-bold text-brand-lilac text-center mb-6">R$ 800<span class="text-sm text-brand-text/50 font-normal"> /domicílio</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow font-medium text-sm text-brand-text">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 3 Aplicações de Taping</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 2 Retiradas Profissionais</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green text-lg"></i> 1 Laserterapia (cesariana ou períneo)</li>
+                    </ul>
+                    <a href="https://wa.me/5511977521383?text=Olá, quero saber mais sobre o Plano Ouro de Taping" target="_blank" class="w-full block text-center bg-brand-nude text-brand-dark py-4 rounded-full font-bold hover:bg-brand-lilac transition-colors">Escolher este</a>
+                </div>
+            </div>
+
+            <!-- Furo e Outros Serviços -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 reveal-up">
+                
+                <!-- Coluna 1: Furo e Taping Avulso -->
+                <div class="space-y-8">
+                    <div class="bg-brand-nude/40 rounded-[2.5rem] p-8 md:p-10 border border-brand-nude">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6 flex items-center gap-3"><i class="fa-solid fa-ear-listen text-brand-lilac"></i> Furo Humanizado</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm">
+                                <div>
+                                    <p class="font-bold text-brand-dark">Apenas o Furo</p>
+                                    <p class="text-xs text-brand-text mt-1">Joia própria estéril incluída.</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="font-bold text-brand-dark">R$ 140 <span class="text-xs font-normal">(Gab.)</span></p>
+                                    <p class="font-bold text-brand-dark text-xs">A partir de R$ 250 <span class="font-normal">(Dom.)</span></p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-brand-lilac/30">
+                                <div>
+                                    <p class="font-bold text-brand-dark">Plano Bronze (Gabinete)</p>
+                                    <p class="text-xs text-brand-text mt-1">1 Furo + 1 Taping Pós (s/ retirada)</p>
+                                </div>
+                                <p class="font-bold text-brand-lilac text-lg">R$ 380</p>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-brand-lilac/30">
+                                <div>
+                                    <p class="font-bold text-brand-dark">Plano Prata (Gabinete)</p>
+                                    <p class="text-xs text-brand-text mt-1">1 Furo + Laser Orelhas + 1 Taping Pós</p>
+                                </div>
+                                <p class="font-bold text-brand-lilac text-lg">R$ 400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2.5rem] p-8 md:p-10 border border-brand-nude shadow-sm">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6">Taping Avulso</h3>
+                        <ul class="space-y-4 font-medium text-sm">
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Gestação (Gabinete)</span>
+                                <span class="font-bold text-brand-dark">R$ 180</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Gestação (Domicílio)</span>
+                                <span class="font-bold text-brand-dark">R$ 250</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Pós-Parto (Gabinete)</span>
+                                <span class="font-bold text-brand-dark">R$ 250</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Pós-Parto (Dom/Mat)</span>
+                                <span class="font-bold text-brand-dark">R$ 350</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Cursos e Consultorias -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-[2.5rem] p-8 md:p-10 border border-brand-nude shadow-sm">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6 flex items-center gap-3"><i class="fa-solid fa-users text-brand-green"></i> Curso para Gestantes</h3>
+                        <ul class="space-y-4 font-medium text-sm">
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Online</span>
+                                <span class="font-bold text-brand-dark">R$ 300</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Presencial (Gabinete)</span>
+                                <span class="font-bold text-brand-dark">R$ 400</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-brand-light p-4 rounded-2xl">
+                                <span>Atendimento Domiciliar</span>
+                                <span class="font-bold text-brand-dark">R$ 450*</span>
+                            </li>
+                        </ul>
+                        <p class="text-xs text-brand-text/70 mt-4 italic">+ R$ 200,00 por participante adicional.</p>
+                    </div>
+
+                    <div class="bg-brand-green/20 rounded-[2.5rem] p-8 md:p-10 border border-brand-green/30">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-6">Consultoria & Laserterapia</h3>
+                        <ul class="space-y-4 font-medium text-sm">
+                            <li class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm">
+                                <span>Atendimentos Avulsos</span>
+                                <span class="text-xs font-bold uppercase bg-brand-nude text-brand-dark px-3 py-1 rounded-full">Sob Consulta</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border-l-4 border-brand-lilac">
+                                <div>
+                                    <span class="block text-brand-dark font-bold">Plano Bronze</span>
+                                    <span class="text-xs text-brand-text">Consultoria + Curso <br> ou Consultoria + Laser + Taping</span>
+                                </div>
+                                <span class="text-xs font-bold uppercase bg-brand-nude text-brand-dark px-3 py-1 rounded-full">Sob Consulta</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border-l-4 border-brand-green">
+                                <div>
+                                    <span class="block text-brand-dark font-bold">Plano Prata (Dom)</span>
+                                    <span class="text-xs text-brand-text">Curso + Consultoria + Laser</span>
+                                </div>
+                                <span class="text-xs font-bold uppercase bg-brand-nude text-brand-dark px-3 py-1 rounded-full">Sob Consulta</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p class="text-xs text-center text-brand-text mt-12 italic">* Dependendo da localização (CEP), poderá haver acréscimo referente à taxa de deslocação.</p>
+        </div>
+    </section>
+
+    <!-- Depoimentos de Mães -->
+    <section id="depoimentos" class="py-24 bg-brand-nude/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-4">Mural do Amor</h2>
+                <p class="text-lg text-brand-text font-medium">As palavras que aquecem o meu coração todos os dias.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude relative reveal-up delay-100 baby-card">
+                    <i class="fa-solid fa-quote-left text-3xl text-brand-lilac mb-4 opacity-50 block"></i>
+                    <p class="text-brand-text font-medium mb-8 text-sm leading-relaxed">"A Gabi foi um anjo no meu pós-parto. A consultoria de amamentação salvou a nossa rotina e o laser curou as minhas gretas muito depressa. Indico de olhos fechados!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 bg-brand-nude rounded-full flex items-center justify-center text-brand-dark font-bold text-lg">M</div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Mariana S.</p>
+                            <p class="text-xs text-brand-text">Mãe do Leo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude relative reveal-up delay-200 baby-card">
+                    <i class="fa-solid fa-quote-left text-3xl text-brand-lilac mb-4 opacity-50 block"></i>
+                    <p class="text-brand-text font-medium mb-8 text-sm leading-relaxed">"Fizemos o furo humanizado na nossa bebé e foi perfeito. A Gabi é super paciente, explicou tudo passo a passo e a nossa pequena nem chorou."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-brand-dark font-bold text-lg">C</div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Carolina & Tiago</p>
+                            <p class="text-xs text-brand-text">Pais da Sofia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-nude relative reveal-up delay-300 baby-card">
+                    <i class="fa-solid fa-quote-left text-3xl text-brand-lilac mb-4 opacity-50 block"></i>
+                    <p class="text-brand-text font-medium mb-8 text-sm leading-relaxed">"O taping na gestação aliviou demais as minhas dores nas costas. E no pós-parto, deu-me uma segurança enorme para pegar no meu bebé. Maravilhoso."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 bg-brand-lilac rounded-full flex items-center justify-center text-brand-dark font-bold text-lg">J</div>
+                        <div>
+                            <p class="font-bold text-brand-dark text-sm">Juliana M.</p>
+                            <p class="text-xs text-brand-text">Mãe da Alice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Dúvidas) -->
+    <section id="faq" class="py-24 bg-brand-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <div class="w-12 h-12 bg-brand-nude rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-regular fa-circle-question text-brand-dark text-xl"></i>
+                </div>
+                <h2 class="font-serif text-4xl font-bold text-brand-dark mb-4">Dúvidas Comuns</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white border-2 border-brand-nude rounded-[2rem]">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none rounded-[2rem]">
+                        <span class="font-bold text-brand-dark text-base md:text-lg">Atende através de plano de saúde/seguro?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-nude flex items-center justify-center shrink-0 ml-4">
+                            <i class="fa-solid fa-chevron-down faq-icon transition-transform duration-300 text-brand-dark text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-brand-text text-sm font-medium leading-relaxed">
+                            Os meus cuidados são exclusivamente particulares. Contudo, forneço um recibo detalhado com o meu registo profissional (COREN) para que possa solicitar o reembolso ao seu plano de saúde, de acordo com as regras de cobertura da sua apólice.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white border-2 border-brand-nude rounded-[2rem]">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none rounded-[2rem]">
+                        <span class="font-bold text-brand-dark text-base md:text-lg">Qual é a sua zona de atendimento ao domicílio?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-nude flex items-center justify-center shrink-0 ml-4">
+                            <i class="fa-solid fa-chevron-down faq-icon transition-transform duration-300 text-brand-dark text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-brand-text text-sm font-medium leading-relaxed">
+                            O meu gabinete físico fica em Itaquera (São Paulo). Para idas ao domicílio, atendo em diversas zonas de São Paulo capital. O valor da taxa de deslocação é calculado com base no seu código postal (CEP) ou da maternidade.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white border-2 border-brand-nude rounded-[2rem]">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none rounded-[2rem]">
+                        <span class="font-bold text-brand-dark text-base md:text-lg">Qual é a idade ideal para o furo na orelhinha?</span>
+                        <div class="w-8 h-8 rounded-full bg-brand-nude flex items-center justify-center shrink-0 ml-4">
+                            <i class="fa-solid fa-chevron-down faq-icon transition-transform duration-300 text-brand-dark text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-6 pb-6 text-brand-text text-sm font-medium leading-relaxed">
+                            Recomendo a partir dos 15 dias de vida, avaliando sempre se a bebé está a mamar bem, a ganhar peso e se já recebeu as primeiras vacinas. Contudo, a técnica também é perfeita para crianças mais crescidas ou mesmo adultos que queiram um novo furo sem dor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada Final Doce -->
+    <section class="py-16 md:py-24 bg-brand-lilac text-center relative overflow-hidden rounded-t-[3rem] md:rounded-t-[4rem]">
+        <div class="max-w-4xl mx-auto px-4 relative z-10 reveal-up">
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark mb-4 sm:mb-6">Vamos viver este momento juntas?</h2>
+            <p class="text-lg sm:text-xl text-brand-dark/80 mb-8 sm:mb-10 font-medium">Estou aqui para apoiar a sua jornada e o início de vida do seu bebé.</p>
+            <a href="https://wa.me/5511977521383" target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-brand-light px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:bg-white hover:text-brand-dark transition-colors shadow-xl">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Falar com a Gabriela
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="bg-brand-dark text-brand-light pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                
+                <!-- Coluna 1 -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 flex items-center justify-center text-brand-lilac">
+                            <i class="fa-solid fa-person-breastfeeding text-3xl"></i>
+                        </div>
+                        <div class="flex flex-col border-l border-brand-lilac/30 pl-3">
+                            <span class="font-serif font-bold text-xl leading-none tracking-widest uppercase">Gabriela</span>
+                            <span class="font-serif font-bold text-xl leading-none tracking-widest uppercase mb-1">Almeida</span>
+                        </div>
+                    </div>
+                    <p class="text-brand-light/70 text-sm font-medium leading-relaxed mb-6 pr-4">
+                        A sua Enfermeira Obstetra. Dedicada a transformar a chegada do seu bebé numa experiência segura, informada e de puro afeto.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/5511977521383" target="_blank" class="w-10 h-10 rounded-full bg-brand-light/10 flex items-center justify-center hover:bg-brand-lilac hover:text-brand-dark transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-brand-light/10 flex items-center justify-center hover:bg-brand-lilac hover:text-brand-dark transition-colors">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-brand-lilac">Contactos</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-brand-lilac"></i>
+                            <div>
+                                <p class="text-brand-light/80">Telemóvel / WhatsApp</p>
+                                <a href="https://wa.me/5511977521383" class="text-brand-light hover:text-brand-lilac transition-colors">[11] 97752-1383</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-instagram mt-1 text-brand-lilac"></i>
+                            <div>
+                                <p class="text-brand-light/80">Instagram</p>
+                                <a href="#" class="text-brand-light hover:text-brand-lilac transition-colors">@gabrielalmeida_enf_obstetra</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-brand-lilac">Gabinete e Pagamentos</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-start gap-3 mb-6">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-green"></i>
+                            <div>
+                                <p class="text-brand-light/80">Morada</p>
+                                <p class="text-brand-light">Av. Águia de Haia, 723<br>Itaquera - SP<br>Cep: 03694-000</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="text-brand-light/80 mb-3">Aceitamos</p>
+                            <div class="flex gap-3 text-2xl text-brand-light/60">
+                                <i class="fa-brands fa-pix hover:text-brand-green transition-colors cursor-help" title="PIX"></i>
+                                <i class="fa-regular fa-credit-card hover:text-brand-light transition-colors cursor-help" title="Cartão"></i>
+                                <i class="fa-solid fa-money-bill-wave hover:text-brand-green transition-colors cursor-help" title="Numerário"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-light/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-brand-light/50">
+                <p>&copy; 2026 Gabriela Almeida | Acolhimento Materno. Todos os direitos reservados.</p>
+                <p class="flex items-center gap-1">Feito com <i class="fa-solid fa-heart text-brand-lilac"></i> para o seu momento.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts da Página -->
+    <script src="js/main.js"></script>
+</body>
+</html>
